@@ -1,0 +1,7 @@
+{
+  "ConnectionStrings": {
+    "SqlServerConnection": "",
+    "LocalizaDB": "server=localhost; uid=root; pwd=asp.net; database=LocalizaDB"
+    //"LocalizaDB": "server=remotemysql.com; uid=; pwd=; database="
+  }
+}

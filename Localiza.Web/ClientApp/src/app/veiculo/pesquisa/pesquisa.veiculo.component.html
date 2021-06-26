@@ -1,0 +1,39 @@
+
+<h1 class="h4 titulo mb-2">Pesquisa de Veículos</h1>
+<p *ngIf="!veiculos">Carregando Veículos...</p>
+
+<button class="btn btn-primary mb-2" (click)="adicionarVeiculo()">Adicionar Veiculo</button>
+
+<table class="table table-hover" *ngIf="veiculos">
+  <thead>
+    <tr>
+      <th>MARCA</th>
+      <th>MODELO</th>
+      <th>ANO</th>
+      <th>PLACA</th>
+      <th>CHASSI</th>
+      <th>RENAVAN</th>
+      <th>IMAGEM</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let v of veiculos">
+      <td>{{v.marca}}</td>
+      <td>{{v.modelo}}</td>
+      <td>{{v.ano}}</td>
+      <td>{{v.placa}}</td>
+      <td>{{v.codChassi}}</td>
+      <td>{{v.codRenavan}}</td>
+      <td style="width:40px; height:40px"><img src="../../../../../arquivos/{{v.nomeArquivo}}" style="width:70px; height:70px" /></td>
+      <td><button class="btn btn-success btn sm" (click)="editarVeiculo(v)">Editar</button></td>
+      <td><button class="btn btn-danger btn sm" (click)="deletarVeiculo(v)">Deletar</button></td>
+
+    </tr>
+  </tbody>
+
+
+
+
+</table>
